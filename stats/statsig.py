@@ -67,5 +67,5 @@ stat2_new, p_value2_new = friedmanchisquare(*data_new_tied_avg.T)
 (stat1_new, p_value1_new), (stat2_new, p_value2_new)
 
 print("part2")
-print(stat1,p_value1)
-print(stat2,p_value2)
+print(stat1_new,p_value1_new)
+print(stat2_new,p_value2_new)
