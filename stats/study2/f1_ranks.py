@@ -3,10 +3,9 @@ from scipy.stats import wilcoxon
 from scipy.stats import binom
 import numpy as np
 
-# Define the positions in order (Eye, Above, Right, Below)
 positions = ["Eye", "Above", "Right", "Below"]
 
-# Dataset with participants' rankings
+#Female ranks, part 1
 data_raw_1 = [
     ["Above", "Below", "Eye", "Right"],
     ["Eye", "Below", "Right", "Above"],
@@ -17,6 +16,7 @@ data_raw_1 = [
     ["Right", "Eye", "Above", "Below"]
 ]
 
+#female ranks, part 2
 data_raw_2 = [
     ["Above", "Right", "Below", "Eye"],
     ["Below", "Eye", "Right", "Above"],
@@ -27,11 +27,13 @@ data_raw_2 = [
     ["Right", "Eye", "Above", "Below"]
 ]
 
+current_data = data_raw_1 # TOGGLE THIS TO data_raw_2 to run on part 2 data
+
 # Initialize an empty list to store the rankings for each participant
 data_raw = []
 
 # Convert the rankings into numerical values
-for ranking in data_raw_2: #TODO - toggle
+for ranking in current_data:
     # Create a list of ranks for the current participant
     ranks = [ranking.index(pos) + 1 for pos in positions]
     data_raw.append(ranks)

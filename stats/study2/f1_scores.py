@@ -1,17 +1,18 @@
 from scipy.stats import friedmanchisquare
 from scipy.stats import wilcoxon
 
-#part 1
-# above_f = [5, 3, 3, 6, 2, 2, 4] #only first 7 are real data points
-# eye_f = [5, 1, 4, 2, 4, 4, 4]
-# right_f = [4, 2, 3, 4, 2, 7, 3]
-# below_f = [6, 2, 6, 6, 7, 7, 7]
+#female "socially awkward" score, part 1
+#comment these arrays out and uncomment the part 2 arrays below to run tests on part 2 data
+above_f = [5, 3, 3, 6, 2, 2, 4]
+eye_f = [5, 1, 4, 2, 4, 4, 4]
+right_f = [4, 2, 3, 4, 2, 7, 3]
+below_f = [6, 2, 6, 6, 7, 7, 7]
 
-#part 2
-above_f = [3, 3, 2, 7, 1, 6, 2] #only first 7 are real data points
-eye_f = [2, 1, 3, 2, 1, 4, 2]
-right_f = [3, 3, 3, 3, 1, 4, 1]
-below_f = [3, 2, 6, 5, 2, 7, 6]
+#female "socially awkward" score, part 2
+# above_f = [3, 3, 2, 7, 1, 6, 2]
+# eye_f = [2, 1, 3, 2, 1, 4, 2]
+# right_f = [3, 3, 3, 3, 1, 4, 1]
+# below_f = [3, 2, 6, 5, 2, 7, 6]
 
 # Running the Friedman test
 statistic_f, p_value_f = friedmanchisquare(above_f, eye_f, right_f, below_f)
