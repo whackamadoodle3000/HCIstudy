@@ -1,26 +1,26 @@
 from scipy.stats import friedmanchisquare
 from scipy.stats import wilcoxon
 
-# Data for each position
-
-#6 guys - stat sig for friedman 
-#8 guys - stat sig for paired (can include or not include the guy who put 1s for everything)
-# above_m = [1, 2, 3, 5, 3, 3, 1]
-# eye_m = [2, 3, 2, 2, 3, 4, 1]
-# right_m = [4, 7, 1, 6, 1, 6, 1]
-# below_m = [6, 7, 6, 5, 7, 7, 6]
-
-#yes for everything except below,right
-#still ok if we use weird guy (1, 2, 1, 1)
-#stil ok if (5,4,6,5)
-#joever if (7,7,7,1)
+#male "socially awkward" scores, part 1
+#comment these arrays out and uncomment the part 2 arrays below to run tests on part 2 data
+above_m = [1, 2, 3, 5, 3, 3, 1]
+eye_m = [2, 3, 2, 2, 3, 4, 1]
+right_m = [4, 7, 1, 6, 1, 6, 1]
+below_m = [6, 7, 6, 5, 7, 7, 6]
 
 
-#male part 2
-above_m = [1,2,2,5,2, 3, 1] #all data points are real
-eye_m = [1,3,4,3,1, 4, 1]
-right_m = [4,4,1,3,3, 5, 2]
-below_m = [4,2,5,2,6, 7, 6]
+#male "socially awkward" scores, part 2
+# above_m = [1,2,2,5,2, 3, 1]
+# eye_m = [1,3,4,3,1, 4, 1]
+# right_m = [4,4,1,3,3, 5, 2]
+# below_m = [4,2,5,2,6, 7, 6]
+
+
+
+
+
+
+
 
 # Running the Friedman test
 statistic_m, p_value_m = friedmanchisquare(above_m, eye_m, right_m, below_m)

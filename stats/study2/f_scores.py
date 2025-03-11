@@ -14,6 +14,14 @@ below_f = [6, 2, 6, 6, 7, 7, 7]
 # right_f = [3, 3, 3, 3, 1, 4, 1]
 # below_f = [3, 2, 6, 5, 2, 7, 6]
 
+
+
+
+
+
+
+
+
 # Running the Friedman test
 statistic_f, p_value_f = friedmanchisquare(above_f, eye_f, right_f, below_f)
 
