@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Data
-positions = ['Eye', 'Above', 'Right', 'Below']  # Positions (X-axis labels)
+positions = ['Above', 'Eye', 'Below', 'Control']  # Positions (X-axis labels)
 ratings = [1, 2, 3, 4, 5, 6, 7]  # Ratings (Y-axis segments)
 
 
 from collections import Counter
 
 def count_ratings(above, eye, right, below):
-    positions = {'Above': above, 'Eye': eye, 'Right': right, 'Below': below}
+    positions = {'Above': above, 'Eye': eye, 'Below': below, 'Control': control}
     rating_counts = {}
     
     for pos, ratings in positions.items():
@@ -18,32 +18,25 @@ def count_ratings(above, eye, right, below):
     
     return rating_counts
 
-#MALE
-above = [1, 2, 3, 5, 3, 3, 1, 2]
-eye = [2, 3, 2, 2, 3, 4, 1, 5]
-right = [4, 7, 1, 6, 1, 6, 1, 2]
-below = [6, 7, 6, 5, 7, 7, 6, 4]
+# Example input
+#part 1
+above = [6,7,7,7,7,7,7,7,7,7,5,7,7,5,6,6]
+eye = [7,7,7,7,7,6,6,6,7,7,7,7,7,6,6,7]
+below = [7,7,6,7,7,4,6,5,7,7,7,7,7,6,7,7]
+control = [7,7,7,6,7,5,7,7,7,6,6,7,7,4,7,7]
 
-#FEMALE
-# above = [5, 3, 3, 6, 2, 2, 4, 2]
-# eye = [5, 1, 4, 2, 4, 4, 4, 5]
-# right = [4, 2, 3, 4, 2, 7, 3, 2]
-# below = [6, 2, 6, 6, 7, 7, 7, 4]
-
-#COMBINED
-# above = [1, 2, 3, 5, 3, 3, 1, 2, 5, 3, 3, 6, 2, 2, 4, 2]
-# eye = [2, 3, 2, 2, 3, 4, 1, 5, 5, 1, 4, 2, 4, 4, 4, 5]
-# right = [4, 7, 1, 6, 1, 6, 1, 2, 4, 2, 3, 4, 2, 7, 3, 2]
-# below = [6, 7, 6, 5, 7, 7, 6, 4, 6, 2, 6, 6, 7, 7, 7, 4]
-
+#part 2
+# above = [6,7,4,4,7,6,6,5, 7,7,4,6,7,6,5,6]
+# eye = [7,7,7,7,7,6,6,7, 7,7,6,7,6,5,7,7]
+# below = [7,7,6,7,7,5,5,7, 7,7,6,6,5,5,7,6]
+# control = [7,7,6,6,7,6,6,6, 7,7,6,7,6,6,6,4]
 
 # Compute rating counts
-rating_counts = count_ratings(above, eye, right, below)
+rating_counts = count_ratings(above, eye, control, below)
 print(rating_counts)
 
 # Custom color scheme for ratings 1 to 7 (dark green to red)
-colors_custom = ['#006400', '#2e8b57', '#66c266', '#ff9966', '#ff7f50', '#ff6347', '#ff4500']
-
+colors_custom = ['#ff4500', '#ff6347', '#ff7f50', '#ff9966', '#66c266', '#2e8b57', '#006400']
 # Plot setup
 fig, ax = plt.subplots(figsize=(8, 6))
 
@@ -63,7 +56,7 @@ for i, rating in enumerate(ratings):
 ax.set_xticks(x_pos)
 ax.set_xticklabels(positions)
 ax.set_ylabel('Count')
-ax.set_title('Male Social Awkwardness Ratings')
+ax.set_title('Part 1 (Uninformed) Engagement Ratings')
 ax.legend(title='Rating')
 
 # Adjust layout and display

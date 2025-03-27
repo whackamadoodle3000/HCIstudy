@@ -13,7 +13,8 @@ data_raw_1 = [
     ["Eye", "Above", "Below", "Right"],
     ["Eye", "Above", "Right", "Below"],
     ["Above", "Eye", "Right", "Below"],
-    ["Eye", "Right", "Above", "Below"]
+    ["Eye", "Right", "Above", "Below"],
+    ["Above", "Right", "Eye", "Below"]
 ]
 
 #male ranks, part 2
@@ -24,7 +25,8 @@ data_raw_2 = [
     ["Eye", "Below", "Above", "Right"],
     ["Eye", "Above", "Right", "Below"],
     ["Above", "Right", "Eye", "Below"],
-    ["Eye", "Above", "Right", "Below"]
+    ["Eye", "Above", "Right", "Below"],
+    ["Right", "Above", "Eye", "Below"]
 ]
 
 current_data = data_raw_1 # TOGGLE THIS TO data_raw_2 to run on part 2 data

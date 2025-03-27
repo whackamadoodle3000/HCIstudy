@@ -5,26 +5,46 @@ import numpy as np
 
 positions = ["Eye", "Above", "Right", "Below"]
 
-#Female ranks, part 1
+#combined ranks, part 1
 data_raw_1 = [
+    ["Eye", "Above", "Right", "Below"],
+    ["Above", "Eye", "Right", "Below"],
+    ["Right", "Eye", "Above", "Below"],
+    ["Eye", "Above", "Below", "Right"],
+    ["Eye", "Above", "Right", "Below"],
+    ["Above", "Eye", "Right", "Below"],
+    ["Eye", "Right", "Above", "Below"],
+    ["Above", "Right", "Eye", "Below"],
+
     ["Above", "Below", "Eye", "Right"],
     ["Eye", "Below", "Right", "Above"],
     ["Right", "Above", "Eye", "Below"],
     ["Eye", "Right", "Below", "Above"],
     ["Above", "Right", "Below", "Eye"],
     ["Above", "Eye", "Right", "Below"],
-    ["Right", "Eye", "Above", "Below"]
+    ["Right", "Eye", "Above", "Below"],
+    ["Below", "Above", "Right", "Eye"]
 ]
 
-#female ranks, part 2
+#combined ranks, part 2
 data_raw_2 = [
+    ["Eye", "Above", "Right", "Below"],
+    ["Above", "Eye", "Right", "Below"],
+    ["Right", "Above", "Eye", "Below"],
+    ["Eye", "Below", "Above", "Right"],
+    ["Eye", "Above", "Right", "Below"],
+    ["Above", "Right", "Eye", "Below"],
+    ["Eye", "Above", "Right", "Below"],
+    ["Right", "Above", "Eye", "Below"],
+
     ["Above", "Right", "Below", "Eye"],
     ["Below", "Eye", "Right", "Above"],
     ["Above", "Eye", "Right", "Below"],
     ["Eye", "Right", "Below", "Above"],
     ["Above", "Right", "Eye", "Below"],
     ["Above", "Right", "Eye", "Below"],
-    ["Right", "Eye", "Above", "Below"]
+    ["Right", "Eye", "Above", "Below"],
+    ["Right", "Below", "Above", "Eye"]
 ]
 
 current_data = data_raw_1 # TOGGLE THIS TO data_raw_2 to run on part 2 data
@@ -38,7 +58,9 @@ current_data = data_raw_1 # TOGGLE THIS TO data_raw_2 to run on part 2 data
 
 
 
+
 data_raw = []
+
 
 # Convert the rankings into numerical values
 for ranking in current_data:

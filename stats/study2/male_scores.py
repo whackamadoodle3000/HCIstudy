@@ -3,17 +3,17 @@ from scipy.stats import wilcoxon
 
 #male "socially awkward" scores, part 1
 #comment these arrays out and uncomment the part 2 arrays below to run tests on part 2 data
-above_m = [1, 2, 3, 5, 3, 3, 1]
-eye_m = [2, 3, 2, 2, 3, 4, 1]
-right_m = [4, 7, 1, 6, 1, 6, 1]
-below_m = [6, 7, 6, 5, 7, 7, 6]
+above_m = [1, 2, 3, 5, 3, 3, 1, 2]
+eye_m = [2, 3, 2, 2, 3, 4, 1, 5]
+right_m = [4, 7, 1, 6, 1, 6, 1, 2]
+below_m = [6, 7, 6, 5, 7, 7, 6, 4]
 
 
 #male "socially awkward" scores, part 2
-# above_m = [1,2,2,5,2, 3, 1]
-# eye_m = [1,3,4,3,1, 4, 1]
-# right_m = [4,4,1,3,3, 5, 2]
-# below_m = [4,2,5,2,6, 7, 6]
+# above_m = [1, 2, 2, 5, 2, 3, 1, 5]
+# eye_m = [1, 3, 4, 3, 1, 4, 1, 3]
+# right_m = [4, 4, 1, 3, 3, 5, 2, 3]
+# below_m = [4, 2, 5, 2, 6, 7, 6, 6]
 
 
 
